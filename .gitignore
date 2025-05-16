@@ -2,3 +2,4 @@ mini_food
 __pycache__
 data
 models
+.gradio
