@@ -250,20 +250,6 @@ def set_seeds(seed: int=42):
 def download_data(source: str, 
                   destination: str,
                   remove_source: bool = True) -> Path:
-    """Downloads a zipped dataset from source and unzips to destination.
-
-    Args:
-        source (str): A link to a zipped file containing data.
-        destination (str): A target directory to unzip data to.
-        remove_source (bool): Whether to remove the source after downloading and extracting.
-    
-    Returns:
-        pathlib.Path to downloaded data.
-    
-    Example usage:
-        download_data(source="https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi.zip",
-                      destination="pizza_steak_sushi")
-    """
     # Setup path to data folder
     data_path = Path("data/")
     image_path = data_path / destination
@@ -292,3 +278,5 @@ def download_data(source: str,
             os.remove(data_path / target_file)
     
     return image_path
+
+
