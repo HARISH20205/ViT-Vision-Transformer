@@ -63,7 +63,14 @@ def test_step(model, loss_fn, test_dataloader, device):
 
 
 def train(
-    model, optimizer, loss_fn, train_dataloader, test_dataloader, epochs, device, writer
+    model,
+    optimizer,
+    loss_fn,
+    train_dataloader,
+    test_dataloader,
+    epochs,
+    device,
+    writer=False,
 ):
     results = {"train_loss": [], "train_acc": [], "test_loss": [], "test_acc": []}
 
@@ -113,5 +120,5 @@ def train(
         else:
             pass
     if writer:
-        writer.close
+        writer.close()
     return results
